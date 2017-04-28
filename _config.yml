@@ -1,0 +1,74 @@
+author: Denny
+name: 
+  en: Java Visite
+  fr: Java Visites
+  id: Berkunjung ke Jawa
+address: Jalan Mayor Jendral Sungkono I Tretek Tulungagung
+description: 
+  en: Java Visites is a web that contains information about a visit to Indonesia especially the island of Java
+  fr: Java Visites est un site Web qui contient des informations sur une visite en Indonésie en particulier l'île de Java
+  id: Java Visites adalah web yang berisi tentang informasi berkunjung ke Indonesia khusunya pulau Jawa
+footer:
+  en: footer en [Java Visites](https://javavisites.com)
+  fr: footer fr [Java Visites](https://javavisites.com)
+  id: footer id [Java Visites](https://javavisites.com)
+video-text:
+  en: video-text en <br> video-text en.
+  fr: video-text fr <br> video-text fr.
+  id: video-text id <br> video-text id.
+intro-desktop-only:
+  en: intro-desktop-only en
+  fr: intro-desktop-only fr
+  id: intro-desktop-only id
+intro-mobile-only:
+  en: intro-mobile-only en
+  fr: intro-mobile-only fr
+  id: intro-mobile-only id
+watch-call-me:
+  en: Call me
+  fr: Call me
+  id: Hubungi Saya
+watch-video-home:
+  en: NQULD1GRoGw
+  fr: NQULD1GRoGw
+  id: NQULD1GRoGw
+watch-video-button:
+  en: WATCH VIDEO
+  fr: WATCH VIDEO FR
+  id: LIHAT VIDEO
+destination-page:
+  en: Destination
+  fr: Destinations
+  id: Tujuan Wisata
+testomini-page:
+  en: Testimony
+  fr: Testimonie
+  id: Testimoni
+galery-page:
+  en: Galery
+  fr: Galerie
+  id: Galeri
+map-page:
+  en: He we are
+  fr: Le Pu Zong
+  id: Kami Disini
+exclude: [README.md]
+email: admin@javavisites.com
+telephone: +628563654032
+facebook: dennyrwa
+instagram: dennyrwa
+whatsapp-api: https://goo.gl/kNy7kz
+favicon: /static/img/favicon.png
+photos: /static/img/background.jpg
+permalink: pretty
+permalink: /404.html
+repository: Denny
+baseurl: 
+collections:
+  data-destination-en:
+  data-destination-fr:
+  data-destination-id:
+  data-testimoni-en:
+  data-testimoni-fr:
+  data-testimoni-id:
+  data-galery:

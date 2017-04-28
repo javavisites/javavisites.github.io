@@ -1,0 +1,5 @@
+{% if page.name contains "index" %}
+   <link rel="canonical" href="{{ baseurl }}/index.html">
+{% else %}
+   <link rel="canonical" href="{{ page.url }}/index.html">
+{% endif %}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html amp lang="{{ page.language }}">
+<head>
+  {% include metadata.html %}
+  <title>{{ page.title }} | {{ site.name[page.language] }}</title>
+  {% include favicon.html %}
+  {% include canonical.html %}
+  {% include manifest.html %}
+  {% include apple-mobile-web.html %}
+  {% include ampproject.html %}
+  {% include amp-boilerplate.html %}
+  {% include amp-install-serviceworker.html %}
+  {% include amp-lightbox.html %}
+  {% include amp-youtube.html %}
+  {% include amp-iframe.html %}
+  {% include amp-carousel.html %}
+  {% include amp-sidebar.html %}
+  {% include fonts.html %}
+  {% include amp-custom.min.html %}
+</head>
+<body class="home">
+  {% include header.html %}
+  <div class="wrap">
+    <div class="content">
+      {{ content }}
+      {% include video.html %}
+      {% include card-one-id.html %}
+      {% include galery.html %}
+      {% include testimoni-id.html %}
+      {% include maps.html %}
+      {% include footer.html %}
+      {% include service-worker.html %}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<section class="blade blade--blog">
+  <div class="container">
+    <div>
+        <h1 class="blog__section-title">{{ page.title }}</h1>
+    </div>
+    <div class="blog">
+      <div class="blog__tabs">
+          <a class="blog__tab"><h3 class="blog__title">{{ site.name[page.language] }}</h3></a>
+          <a class="blog__tab"><h3 class="blog__title">{{ site.address }}</h3></a>
+          <div class="blog__tab"><a href="{{ site.whatsapp-api }}">
+                  <amp-img
+                  noloading
+                  height=48
+                  width=48
+                  layout=fixed
+                  src="/static/img/whatsapp-symbol.svg">
+                  </amp-img></a>
+                  <a href="sms:{{ site.telephone }}">
+                  <amp-img
+                  noloading
+                  height=48
+                  width=48
+                  layout=fixed
+                  src="/static/img/sms-black.svg">
+                  </amp-img>
+                  </a>
+                  <a href="tel:{{ site.telephone }}">
+                  <amp-img
+                  noloading
+                  height=48
+                  width=48
+                  layout=fixed
+                  src="/static/img/phones-symbol.svg">
+                  </amp-img>
+                  </a>
+          </div>
+          <a href="tel:{{ site.telephone }}" class="blog__tab"><h3 class="blog__title">{{ site.telephone }}</h3></a>
+      </div>
+    </div>
+  </div>
+</section>

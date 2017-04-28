@@ -1,0 +1,12 @@
+<section>
+  <div class="container">
+    <div>
+      <h1>{{ site.galery-page[page.language] }}</h1>
+    </div>
+  <amp-carousel width=auto height=300 controls>
+  {% for item in site.data-galery %}
+    <amp-img noloading src="{{ item.image_galery_path }}" width={{ item.image_galery_width }} height={{ item.image_galery_height }}>
+    </amp-img>
+  {% endfor %}
+  </amp-carousel>
+</section>

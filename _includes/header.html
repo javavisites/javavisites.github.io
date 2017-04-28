@@ -1,0 +1,61 @@
+<amp-sidebar id='sidebar' side='right' layout='nodisplay'>
+  <button class="tab hamburger" id="menu-button" on='tap:sidebar.toggle'></button>
+  <nav>
+    <div class="language desktop">
+      {% if page.name contains "index" %}
+      <a class="en" href="{{ site.baseurl }}/"><amp-img src="/static/img/gb.svg" alt="English" height="20" width="20"></amp-img></a>
+      <a class="fr" href="{{ site.baseurl | append: "/fr" }}"><amp-img src="/static/img/fr.svg" alt="Français" height="20" width="20"></amp-img></a>
+      <a class="id" href="{{ site.baseurl | append: "/id" }}"><amp-img src="/static/img/id.svg" alt="Indonesia" height="20" width="20"></amp-img></a>
+      {% else %}
+      <a class="en" href="{{ site.baseurl | append: page.handle }}"><amp-img src="/static/img/gb.svg" alt="English" height="20" width="20"></amp-img></a>
+      <a class="fr" href="{{ site.baseurl | append: "/fr" | append: page.handle }}"><amp-img src="/static/img/fr.svg" alt="Français" height="20" width="20"></amp-img></a>
+      <a class="id" href="{{ site.baseurl | append: "/id" | append: page.handle }}"><amp-img src="/static/img/id.svg" alt="Bahasa Indonesia" height="20" width="20"></amp-img></a>
+      {% endif %}
+    </div>
+    <ul>
+      <li>
+        <ul>
+          {% assign pages = site.pages | sort: "nav-order"  %}
+          {% for p in pages %}
+          {% if p.language == page.language %}
+          <li class="is-active"><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</amp-sidebar>
+<header class="header fixed">
+  <div class="wrap">
+    <div class="container">
+      <div class="nav-container">
+       <div class="left-nav">
+        <a href="/" class="tab header-title">
+          <span>{{ site.name[page.language] }}</span>
+        </a>
+      </div>
+      <div class="right alt">
+        {% assign pages = site.pages | sort: "nav-order"  %}
+        {% for p in pages %}
+        {% if p.language == page.language %}
+        <a class="tab desktop" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        {% endif %}
+        {% endfor %}
+        <div class="language desktop">
+          {% if page.name contains "index" %}
+          <a class="en" href="{{ site.baseurl }}/"><amp-img src="/static/img/gb.svg" alt="English" height="20" width="20"></a>
+          <a class="fr" href="{{ site.baseurl | append: "/fr" }}"><amp-img src="/static/img/fr.svg" alt="Français" height="20" width="20"></a>
+          <a class="id" href="{{ site.baseurl | append: "/id" }}"><amp-img src="/static/img/id.svg" alt="Bahasa Indonesia" height="20" width="20"></a>
+          {% else %}
+          <a class="en" href="{{ site.baseurl | append: page.handle }}"><amp-img src="/static/img/gb.svg" alt="English" height="20" width="20"></a>
+          <a class="fr" href="{{ site.baseurl | append: "/fr" | append: page.handle }}"><amp-img src="/static/img/fr.svg" alt="Français" height="20" width="20"></a>
+          <a class="id" href="{{ site.baseurl | append: "/id" | append: page.handle }}"><amp-img src="/static/img/id.svg" alt="Bahasa Indonesia" height="20" width="20"></a>
+          {% endif %}
+        </div>
+        <button class="tab hamburger" id="menu-button" on='tap:sidebar.toggle'></button>
+      </div>
+    </div>
+  </div>
+</div>
+</header>

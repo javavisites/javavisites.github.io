@@ -1,0 +1,29 @@
+<section class="blade blade--hero hero">
+  <div class="container">
+    <div class="row">
+      <div class="six columns">
+        <div class="intro-container">
+          <h1>{{ site.video-text[page.language] }}</h1>
+          <p class="intro desktop-only">{{ site.intro-desktop-only[page.language] }}</p>
+          <p class="intro mobile-only">{{ site.intro-mobile-only[page.language] }}</p>
+          <a on="tap:my-lightbox" class="watch-video" role="button">{{ site.watch-video-button[page.language] }}</a>
+          <div class="mobile-only">
+            <a class="go-button go-button--alt" href="{{ site.watch-call-phone }}">
+              {{ site.watch-call-me[page.language] }}
+            </a>
+          </div>
+          <amp-lightbox id="my-lightbox" class="lightbox" layout="nodisplay" on="tap:my-lightbox.close" role="button" tabindex="1">
+            <div class="lightbox__container">
+              <amp-youtube
+                data-videoid="{{ site.watch-video-home[page.language] }}"
+                layout="responsive"
+                width="480" height="270">
+              </amp-youtube>
+            </div>
+            <div class="lightbox__close" on="tap:my-lightbox.close" role="button" tabindex="1"></div>
+          </amp-lightbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

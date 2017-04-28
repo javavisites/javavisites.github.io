@@ -1,2 +1,2 @@
 # javavisites.com
-## entar yaa
+It is a Company Profile Website that share information about vacation, java, and etc

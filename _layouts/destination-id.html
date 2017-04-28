@@ -1,0 +1,86 @@
+<!doctype html>
+<html amp lang="{{ page.language }}">
+<head>
+  {% include metadata.html %}
+  <title>{{ page.title }} | {{ site.name[page.language] }}</title>
+  {% include favicon.html %}
+  {% include canonical.html %}
+  {% include manifest.html %}
+  {% include apple-mobile-web.html %}
+  {% include ampproject.html %}
+  {% include amp-boilerplate.html %}
+  {% include amp-install-serviceworker.html %}
+  {% include amp-iframe.html %}
+  {% include amp-carousel.html %}
+  {% include amp-sidebar.html %}
+  {% include fonts.html %}
+  {% include amp-custom.min.html %}
+</head>
+<body class="home">
+  {% include header.html %}
+  <div class="wrap">
+    <div class="content">
+      <section class="blade blade--get-started">
+        <div class="container">
+          <div>
+            <h1>{{ site.destination-page[page.language] }}</h1>
+          </div>
+          <div class="tablet-up">
+            <div class="card-container">
+              {% for item in site.data-destination-id %}
+              <div class="card">
+                <div class="card__image">
+                  <amp-img
+                  noloading
+                  height={{ item.gambar_height_id }}
+                  width={{ item.gambar_width_id }}
+                  layout=responsive
+                  src="{{ item.image_path_id }}">
+                </amp-img>
+              </div>
+              <div class="card__content">
+                <h4 class="card__title">{{ item.card-title_id }}</h4>
+                <p>{{ item.content-card_id }}</p>
+              </div>
+              <div class="card__action">
+                <a href="{{ item.card-action-link_id }}">{{ item.card-action_id }}</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <amp-carousel class="tablet-down"
+        width="auto"
+        height="515"
+        type="slides"
+        layout="fixed-height">
+        {% for item in site.data-destination-id %}
+        <div class="carding">
+          <div class="card__image">
+            <amp-img
+            noloading
+            height="{{ item.gambar_height_id }}"
+            width="{{ item.gambar_width_id }}"
+            layout="responsive"
+            src="{{ item.image_path_id }}">
+          </amp-img>
+        </div>
+        <div class="card__content">
+          <h4 class="card__title">{{ item.card-title_id }}</h4>
+          <p>{{ item.content-card_id }}</p>
+        </div>
+        <div class="card__action">
+          <a href="{{ item.card-action-link_id }}">{{ item.card-action_id }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </amp-carousel>
+  </div>
+</section>
+{% include maps.html %}
+{% include footer.html %}
+{% include service-worker.html %}
+</div>
+</div>
+</body>
+</html>

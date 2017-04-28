@@ -1,0 +1,57 @@
+<section class="blade blade--get-started">
+	<div class="container">
+		<div>
+			<h1>{{ site.destination-page[page.language] }}</h1>
+		</div>
+		<div class="tablet-up">
+			<div class="card-container">
+				{% for item in site.data-destination-en limit:3 %}
+				<div class="card">
+					<div class="card__image">
+						<amp-img
+						noloading
+						height={{ item.gambar_height }}
+						width={{ item.gambar_width }}
+						layout=responsive
+						src="{{ item.image_path }}">
+						</amp-img>
+					</div>
+					<div class="card__content">
+						<h4 class="card__title">{{ item.card-title }}</h4>
+						<p>{{ item.content-card }}</p>
+					</div>
+					<div class="card__action">
+						<a href="{{ item.card-action-link }}">{{ item.card-action }}</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<amp-carousel class="tablet-down"
+		width="auto"
+		height="515"
+		type="slides"
+		layout="fixed-height">
+		{% for item in site.data-destination-en %}
+		<div class="carding">
+			<div class="card__image">
+				<amp-img
+					noloading
+					height="{{ item.gambar_height }}"
+					width="{{ item.gambar_width }}"
+					layout="responsive"
+					src="{{ item.image_path }}">
+				</amp-img>
+			</div>
+			<div class="card__content">
+				<h4 class="card__title">{{ item.card-title }}</h4>
+				<p>{{ item.content-card }}</p>
+			</div>
+			<div class="card__action">
+				<a href="{{ item.card-action-link }}">{{ item.card-action }}</a>
+			</div>
+		</div>
+		{% endfor %}
+		</amp-carousel>
+	</div>
+</section>

@@ -1,0 +1,66 @@
+<section class="blade blade--contributors">
+  <div class="container">
+      <div>
+        <h1>{{ site.testomini-page[page.language] }}</h1>
+      </div>
+      <amp-carousel class="desktop-up"
+      height="500"
+      layout="flex-item"
+      type="slides">
+      <div class="boxes">
+        {% for item in site.data-testimoni-en limit:2 %}
+        <div class="box">
+          <div class="box__inner">
+            <div class="box__content">
+              “{{ item.box_content_en }}”
+            </div>
+            <div class="box__footer">
+              <div class="box__image">
+                <amp-img src="{{ item.box_image_path_en }}"
+                width="90"
+                height="90"
+                noloading
+                alt="{{ item.nama_testimoni_en }}">
+                </amp-img>
+              </div>
+              <div class="box__credit">
+                <h5 class="box__title">{{ item.nama_testimoni_en }}</h5>
+                <div class="box__subtitle">{{ item.jabatan_testimoni_en }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      </amp-carousel>
+    <amp-carousel class="single mobile-down"
+    width="auto"
+    height="550"
+    type="slides"
+    layout="flex-item">
+    {% for item in site.data-testimoni-en %}
+      <div class="boxing">
+        <div class="box__inner">
+          <div class="box__content">
+            “{{ item.box_content_en }}”
+          </div>
+          <div class="box__footer">
+            <div class="box__image">
+              <amp-img src="{{ item.box_image_path_en }}"
+              width="90"
+              height="90"
+              noloading
+              alt="{{ item.nama_testimoni_en }}">
+              </amp-img>
+            </div>
+            <div class="box__credit">
+              <h5 class="box__title">{{ item.nama_testimoni_en }}</h5>
+              <div class="box__subtitle">{{ item.jabatan_testimoni_en }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </amp-carousel>
+  </div>
+</section>

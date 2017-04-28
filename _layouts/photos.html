@@ -1,0 +1,80 @@
+<!doctype html>
+<html amp lang="{{ page.language }}">
+<head>
+  {% include metadata.html %}
+  <title>{{ page.title }} | {{ site.name[page.language] }}</title>
+  {% include favicon.html %}
+  {% include canonical.html %}
+  {% include manifest.html %}
+  {% include apple-mobile-web.html %}
+  {% include ampproject.html %}
+  {% include amp-boilerplate.html %}
+  {% include amp-install-serviceworker.html %}
+  {% include amp-iframe.html %}
+  {% include amp-carousel.html %}
+  {% include amp-sidebar.html %}
+  {% include fonts.html %}
+  {% include amp-custom.min.html %}
+</head>
+<body class="home">
+  {% include header.html %}
+  <div class="wrap">
+    <div class="content">
+
+      <section class="blade blade--get-fade">
+        <div class="container">
+          <div>
+            <h1>{{ page.title }}</h1>
+          </div>
+          <div class="tablet-up">
+            <div class="card-container">
+              {% for item in site.data-galery %}
+              <div class="card">
+                  <amp-img
+                  noloading
+                  height={{ item.image_galery_height }}
+                  width={{ item.image_galery_width }}
+                  layout=responsive
+                  alt="{{ item.image_title }}"
+                  src="{{ item.image_galery_path }}">
+                </amp-img>
+                <div class="card__action">
+                  <a href="#">{{ item.image_title }}</a>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <amp-carousel class="tablet-down"
+        width="auto"
+        height="355"
+        type="slides"
+        autoplay
+        delay="2000"
+        layout="fixed-height">
+        {% for item in site.data-galery %}
+        <div class="carding">
+          <div class="card__image">
+            <amp-img
+            noloading
+            layout=responsive
+            height="{{ item.image_galery_height }}"
+            width="{{ item.image_galery_width }}"
+            src="{{ item.image_galery_path }}">
+          </amp-img>
+          </div>
+        <div class="card__action">
+          <a href="#">{{ item.image_title }}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </amp-carousel>
+  </div>
+</section>
+{% include maps.html %}
+{% include footer.html %}
+{% include service-worker.html %}
+</div>
+</div>
+</body>
+</html>
