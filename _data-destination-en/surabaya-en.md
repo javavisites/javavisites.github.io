@@ -1,6 +1,6 @@
 ---
 language: en
-image_path: http://blueflametour.com/wp-content/uploads/2015/07/ece77-paket-wisata-kawah-ijen-blue-fire.jpg
+image_path: https://2.bp.blogspot.com/-VbSwjBbTGvs/WQMvRu1fv8I/AAAAAAAAfdw/CE3EL85ZCm0whz-P1c0SiteTE5BbgEKcACLcB/s1600/ece77-paket-wisata-kawah-ijen-blue-fire.jpg
 gambar_height: 355
 gambar_width: 550
 card-title: blue fire en
