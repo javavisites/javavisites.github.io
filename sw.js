@@ -17,13 +17,11 @@
 importScripts('/bower_components/sw-toolbox/sw-toolbox.js');
 
 const config = {
-  offlinePage: '/youre_offline/'
+  offlinePage: '/'
 }
 
 config.filesToCache = [
     '/',
-    '/static/img/',
-    '/static/icons/',
     config.offlinePage,
     '/favicon.ico',
     '/static/img/gb.svg',
@@ -38,7 +36,7 @@ config.filesToCache = [
     '/static/img/hamburger.svg',
     '/static/img/instagram-logo.png',
     '/static/img/logo-javavisites.svg',
-    '/static/img/phone-symbol.svg',
+    '/static/img/phones-symbol.svg',
     '/static/img/sms-black.svg',
     '/static/img/video-play.svg',
     '/static/img/whatsapp-symbol.svg',
