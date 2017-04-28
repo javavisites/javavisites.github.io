@@ -1,6 +1,6 @@
 ---
 language: en
-image_path: http://sewajeepbromo.co.id/wp-content/uploads/2016/04/ijen.jpg
+image_path: https://1.bp.blogspot.com/-lNxItTXtuG4/WQMvRX9G1XI/AAAAAAAAfds/n0cYxUuJRzU85t0BtWqrARJ0QBJm6LUtgCLcB/s1600/ijen.jpg
 gambar_height: 679
 gambar_width: 1024
 card-title: Ijen Crater en
