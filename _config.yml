@@ -1,4 +1,4 @@
-author: Denny
+author: dennyrwa
 name: 
   en: Java Visite
   fr: Java Visites
@@ -56,7 +56,9 @@ exclude: [README.md]
 email: admin@javavisites.com
 telephone: +628563654032
 facebook: dennyrwa
+fb_app_id: 1814750322179234
 instagram: dennyrwa
+twittersite: dennyrwa
 whatsapp-api: https://goo.gl/kNy7kz
 favicon: /static/img/favicon.png
 photos: /static/img/background.jpg
