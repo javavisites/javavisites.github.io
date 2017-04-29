@@ -4,28 +4,34 @@
 <meta property="og:description" content="{{ site.description[page.language] }}">
 <meta name="description" content="{{ site.description[page.language] }}">
 <!-- SCHEMA -->
-<meta itemscope itemtype="http://schema.org/TravelAgency" />
-<meta itemprop="name" content="{{ site.name[page.language] }}" />
-<meta itemprop="description" content="J{{ site.description[page.language] }}" />
-<meta itemprop="url" content="{{ site.siteurl }}">
-<meta itemprop="telephone" content="{{ site.telephone }}">
-<meta name="email" content="{{ site.email }}">
-<meta itemprop="image" content="{{ site.siteurl }}{{ site.photos }}" />
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "{{ site.siteurl }}",
+  "logo": "{{ site.favicon }}",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "{{ site.telephone }}",
+    "contactType": "customer service"
+  }]
+}
+</script>
 <!-- Open Graph Protocol -->
-<meta property="og:url" content="{{ site.siteurl }}">
+{% if page.layout contains "home-en" %}
+	<meta property="og:url" content="{{ baseurl }}/index.html">
+{% else %}
+	<meta property="og:url" content="{{ page.url }}/index.html">
+{% endif %}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ site.name[page.language] }}">
 <meta property="og:description" content="{{ site.description[page.language] }}">
 <meta property="og:image" content="{{ site.siteurl }}{{ site.photos }}">
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="400" />
-<meta property="og:image:height" content="300" />
-<meta property="og:image:secure_url" content="{{ site.siteurl }}{{ site.photos }}" />
+<meta property="fb:app_id" content="{{ site.fb_app_id }}">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{ site.siteurl }}" />
-<meta name="twitter:creator" content="{{ site.author }}">
+<meta name="twitter:site" content="@{{ site.twittersite }}">
+<meta name="twitter:creator" content="@{{ site.author }}">
 <meta name="twitter:title" content="{{ page.title }} | {{ site.name[page.language] }}">
-<meta name="twitter:description" content="{{ site.description[page.language] }}" />
-<meta name="twitter:image" content="{{ site.siteurl }}{{ site.photos }}" />
-<meta name="twitter:site" content="{{ site.siteurl }}">
+<meta name="twitter:description" content="{{ site.description[page.language] }}">
+<meta name="twitter:image" content="{{ site.siteurl }}{{ site.photos }}">
