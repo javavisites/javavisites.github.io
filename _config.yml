@@ -63,6 +63,7 @@ photos: /static/img/background.jpg
 permalink: pretty
 permalink: /404.html
 repository: Denny
+siteurl: https://javavisites.com
 baseurl: 
 collections:
   data-destination-en:
