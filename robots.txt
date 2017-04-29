@@ -11,4 +11,4 @@ User-agent: Googlebot-Image
 Allow: /
 User-agent: Googlebot-Mobile
 Allow: /
-Sitemap: {{ baseurl }}/sitemap.xml
+Sitemap: https://javavisites.com/sitemap.xml
