@@ -9,10 +9,10 @@
   "@context": "http://schema.org",
   "@type": "Organization",
   "url": "{{ site.siteurl }}",
-  "logo": "{{ site.favicon }}",
+  "logo": "{{ site.siteurl }}{{ site.favicon }}",
   "contactPoint": [{
     "@type": "ContactPoint",
-    "telephone": "{{ site.telephone }}",
+    "telephone": "{{ site.telephonedetail }}",
     "contactType": "customer service"
   }]
 }
