@@ -1,10 +1,10 @@
 author: dennyrwa
-name: 
+name:
   en: Java Visite
   fr: Java Visites
   id: Berkunjung ke Jawa
 address: Jalan Mayor Jendral Sungkono I Tretek Tulungagung
-description: 
+description:
   en: Java Visites is a web that contains information about a visit to Indonesia especially the island of Java
   fr: Java Visites est un site Web qui contient des informations sur une visite en Indonésie en particulier l'île de Java
   id: Java Visites adalah web yang berisi tentang informasi berkunjung ke Indonesia khusunya pulau Jawa
@@ -13,7 +13,7 @@ footer:
   fr: footer fr [Java Visites](https://javavisites.com)
   id: footer id [Java Visites](https://javavisites.com)
 video-text:
-  en: video-text en <br> video-text en.
+  en: text ENGGRIS <br> video-text en.
   fr: video-text fr <br> video-text fr.
   id: video-text id <br> video-text id.
 intro-desktop-only:
@@ -67,7 +67,7 @@ permalink: pretty
 permalink: /404.html
 repository: Denny
 siteurl: https://javavisites.com
-baseurl: 
+baseurl:
 collections:
   data-destination-en:
   data-destination-fr:
